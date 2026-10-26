@@ -2,42 +2,42 @@ const stocksByMarket = {
   us: {
     market: "United States",
     stocks: [
-      { ticker: "VTI", name: "Vanguard Total Stock Market ETF", symbol: "AMEX:VTI", risk: "Low", fit: ["low", "medium"], description: "A broad-market fund that offers exposure to many U.S. companies in a single holding.", entry: "Consider a gradual, regular-investing approach; review the fund’s current holdings, costs and price trend first.", hold: "Think in years, not weeks. Revisit your plan periodically and check that broad U.S. exposure still suits you." },
-      { ticker: "KO", name: "The Coca-Cola Company", symbol: "NYSE:KO", risk: "Low–Medium", fit: ["low", "medium"], description: "A well-known consumer-staples company to research for its established global brands and business resilience.", entry: "Compare the current valuation with company fundamentals and recent results; avoid basing an entry on the brand alone.", hold: "A multi-year research horizon may suit a mature business, but review performance and fundamentals regularly." },
-      { ticker: "MSFT", name: "Microsoft Corporation", symbol: "NASDAQ:MSFT", risk: "Medium", fit: ["medium"], description: "A large technology company with cloud, productivity and software businesses worth examining.", entry: "Review its latest earnings, valuation and chart trend. Consider a staged entry rather than trying to pick a perfect low.", hold: "Consider a multi-year horizon if your thesis remains intact; reassess after earnings and material business changes." },
-      { ticker: "NVDA", name: "NVIDIA Corporation", symbol: "NASDAQ:NVDA", risk: "High", fit: ["high"], description: "A semiconductor and AI-infrastructure company with growth potential and meaningful valuation and volatility risks.", entry: "Check current valuation, earnings expectations and volatility before considering any entry; size exposure cautiously.", hold: "Only consider a longer horizon if you can tolerate sharp drawdowns and regularly re-check the growth thesis." }
+      { ticker: "VTI", name: "Vanguard Total Stock Market ETF", symbol: "AMEX:VTI", chartSymbol: "VTI", risk: "Low", fit: ["low", "medium"], description: "A broad-market fund that offers exposure to many U.S. companies in a single holding.", entry: "Consider a gradual, regular-investing approach; review the fund’s current holdings, costs and price trend first.", hold: "Think in years, not weeks. Revisit your plan periodically and check that broad U.S. exposure still suits you." },
+      { ticker: "KO", name: "The Coca-Cola Company", symbol: "NYSE:KO", chartSymbol: "KO", risk: "Low–Medium", fit: ["low", "medium"], description: "A well-known consumer-staples company to research for its established global brands and business resilience.", entry: "Compare the current valuation with company fundamentals and recent results; avoid basing an entry on the brand alone.", hold: "A multi-year research horizon may suit a mature business, but review performance and fundamentals regularly." },
+      { ticker: "MSFT", name: "Microsoft Corporation", symbol: "NASDAQ:MSFT", chartSymbol: "MSFT", risk: "Medium", fit: ["medium"], description: "A large technology company with cloud, productivity and software businesses worth examining.", entry: "Review its latest earnings, valuation and chart trend. Consider a staged entry rather than trying to pick a perfect low.", hold: "Consider a multi-year horizon if your thesis remains intact; reassess after earnings and material business changes." },
+      { ticker: "NVDA", name: "NVIDIA Corporation", symbol: "NASDAQ:NVDA", chartSymbol: "NVDA", risk: "High", fit: ["high"], description: "A semiconductor and AI-infrastructure company with growth potential and meaningful valuation and volatility risks.", entry: "Check current valuation, earnings expectations and volatility before considering any entry; size exposure cautiously.", hold: "Only consider a longer horizon if you can tolerate sharp drawdowns and regularly re-check the growth thesis." }
     ]
   },
   china: {
     market: "China",
     stocks: [
-      { ticker: "600519", name: "Kweichow Moutai Co., Ltd.", symbol: "SSE:600519", risk: "Medium", fit: ["low", "medium"], description: "A major Chinese spirits producer; research brand strength alongside pricing, regulation and changing consumer demand.", entry: "Review current valuation, recent company results and policy or consumer trends; confirm trading access and share-lot rules.", hold: "A multi-year horizon requires ongoing checks on demand, regulation and the company’s latest disclosures." },
-      { ticker: "601318", name: "Ping An Insurance Group", symbol: "SSE:601318", risk: "Medium–High", fit: ["medium", "high"], description: "A diversified financial-services group to examine for its insurance, investment and technology operations.", entry: "Check current financial disclosures, asset quality, valuation and market conditions before considering an entry.", hold: "Review at least after major reporting periods; financial-sector and policy developments can change the thesis." },
-      { ticker: "BABA", name: "Alibaba Group Holding", symbol: "NYSE:BABA", risk: "High", fit: ["high", "medium"], description: "A large e-commerce and cloud business with significant competition, regulatory and cross-border listing considerations.", entry: "Compare recent results, valuation and regulatory developments; understand the specific listing and its risks.", hold: "A multi-year thesis needs regular review of competition, governance, regulation and business performance." }
+      { ticker: "600519", name: "Kweichow Moutai Co., Ltd.", symbol: "SSE:600519", chartSymbol: "600519.SS", risk: "Medium", fit: ["low", "medium"], description: "A major Chinese spirits producer; research brand strength alongside pricing, regulation and changing consumer demand.", entry: "Review current valuation, recent company results and policy or consumer trends; confirm trading access and share-lot rules.", hold: "A multi-year horizon requires ongoing checks on demand, regulation and the company’s latest disclosures." },
+      { ticker: "601318", name: "Ping An Insurance Group", symbol: "SSE:601318", chartSymbol: "601318.SS", risk: "Medium–High", fit: ["medium", "high"], description: "A diversified financial-services group to examine for its insurance, investment and technology operations.", entry: "Check current financial disclosures, asset quality, valuation and market conditions before considering an entry.", hold: "Review at least after major reporting periods; financial-sector and policy developments can change the thesis." },
+      { ticker: "BABA", name: "Alibaba Group Holding", symbol: "NYSE:BABA", chartSymbol: "BABA", risk: "High", fit: ["high", "medium"], description: "A large e-commerce and cloud business with significant competition, regulatory and cross-border listing considerations.", entry: "Compare recent results, valuation and regulatory developments; understand the specific listing and its risks.", hold: "A multi-year thesis needs regular review of competition, governance, regulation and business performance." }
     ]
   },
   hongkong: {
     market: "Hong Kong",
     stocks: [
-      { ticker: "0700", name: "Tencent Holdings Limited", symbol: "HKEX:700", risk: "Medium–High", fit: ["medium", "high"], description: "A major technology and entertainment group; examine its gaming, advertising, fintech and regulatory exposure.", entry: "Review current valuation, business segment results and regulatory news; confirm your broker supports the HK listing.", hold: "Consider only with a multi-year thesis you can revisit as competition and regulation evolve." },
-      { ticker: "0005", name: "HSBC Holdings plc", symbol: "HKEX:5", risk: "Medium", fit: ["low", "medium"], description: "An international bank with substantial Asia exposure; explore its dividend policy, capital position and interest-rate sensitivity.", entry: "Check current results, capital strength, dividend details and rate outlook rather than relying on historical yield.", hold: "Review after financial results and when interest-rate or credit conditions materially change." },
-      { ticker: "9988", name: "Alibaba Group Holding", symbol: "HKEX:9988", risk: "High", fit: ["high", "medium"], description: "A Hong Kong-listed e-commerce and cloud group with competitive, regulatory and share-class risks to understand.", entry: "Compare recent results, valuation and regulatory developments; understand the listing and its risks.", hold: "A multi-year thesis needs regular review of competition, governance, regulation and business performance." }
+      { ticker: "0700", name: "Tencent Holdings Limited", symbol: "HKEX:700", chartSymbol: "0700.HK", risk: "Medium–High", fit: ["medium", "high"], description: "A major technology and entertainment group; examine its gaming, advertising, fintech and regulatory exposure.", entry: "Review current valuation, business segment results and regulatory news; confirm your broker supports the HK listing.", hold: "Consider only with a multi-year thesis you can revisit as competition and regulation evolve." },
+      { ticker: "0005", name: "HSBC Holdings plc", symbol: "HKEX:5", chartSymbol: "0005.HK", risk: "Medium", fit: ["low", "medium"], description: "An international bank with substantial Asia exposure; explore its dividend policy, capital position and interest-rate sensitivity.", entry: "Check current results, capital strength, dividend details and rate outlook rather than relying on historical yield.", hold: "Review after financial results and when interest-rate or credit conditions materially change." },
+      { ticker: "9988", name: "Alibaba Group Holding", symbol: "HKEX:9988", chartSymbol: "9988.HK", risk: "High", fit: ["high", "medium"], description: "A Hong Kong-listed e-commerce and cloud group with competitive, regulatory and share-class risks to understand.", entry: "Compare recent results, valuation and regulatory developments; understand the listing and its risks.", hold: "A multi-year thesis needs regular review of competition, governance, regulation and business performance." }
     ]
   },
   singapore: {
     market: "Singapore",
     stocks: [
-      { ticker: "D05", name: "DBS Group Holdings Ltd", symbol: "SGX:D05", risk: "Low–Medium", fit: ["low", "medium"], description: "A large Singapore bank to research for its earnings, capital strength, credit exposure and dividend policy.", entry: "Review the latest financial results, valuation, credit quality and dividend announcements before considering a position.", hold: "Reassess after reporting periods and as interest-rate, credit and regional conditions change." },
-      { ticker: "C38U", name: "CapitaLand Integrated Commercial Trust", symbol: "SGX:C38U", risk: "Medium", fit: ["low", "medium"], description: "A commercial property trust; examine occupancy, rental outlook, debt costs and distribution sustainability.", entry: "Check current distribution details, property updates, debt profile and interest-rate sensitivity.", hold: "Review distributions, financing costs and property fundamentals regularly; property trusts can still fall in value." },
-      { ticker: "O39", name: "Oversea-Chinese Banking Corporation", symbol: "SGX:O39", risk: "Medium", fit: ["medium", "low"], description: "A regional banking group worth comparing on capital, loan quality, earnings and dividend policy.", entry: "Compare current valuation and the latest financial disclosures with other regional banks.", hold: "Revisit after results and as regional credit and economic conditions evolve." }
+      { ticker: "D05", name: "DBS Group Holdings Ltd", symbol: "SGX:D05", chartSymbol: "D05.SI", risk: "Low–Medium", fit: ["low", "medium"], description: "A large Singapore bank to research for its earnings, capital strength, credit exposure and dividend policy.", entry: "Review the latest financial results, valuation, credit quality and dividend announcements before considering a position.", hold: "Reassess after reporting periods and as interest-rate, credit and regional conditions change." },
+      { ticker: "C38U", name: "CapitaLand Integrated Commercial Trust", symbol: "SGX:C38U", chartSymbol: "C38U.SI", risk: "Medium", fit: ["low", "medium"], description: "A commercial property trust; examine occupancy, rental outlook, debt costs and distribution sustainability.", entry: "Check current distribution details, property updates, debt profile and interest-rate sensitivity.", hold: "Review distributions, financing costs and property fundamentals regularly; property trusts can still fall in value." },
+      { ticker: "O39", name: "Oversea-Chinese Banking Corporation", symbol: "SGX:O39", chartSymbol: "O39.SI", risk: "Medium", fit: ["medium", "low"], description: "A regional banking group worth comparing on capital, loan quality, earnings and dividend policy.", entry: "Compare current valuation and the latest financial disclosures with other regional banks.", hold: "Revisit after results and as regional credit and economic conditions evolve." }
     ]
   },
   malaysia: {
     market: "Malaysia",
     stocks: [
-      { ticker: "1155", name: "Malayan Banking Berhad", symbol: "MYX:MAYBANK", risk: "Low–Medium", fit: ["low", "medium"], description: "A major Malaysian bank to research for its capital, asset quality, regional earnings and dividend policy.", entry: "Review current financial results, valuation, credit quality and dividend announcements; check local trading rules.", hold: "Reassess after reporting periods and as interest-rate, credit and regional conditions change." },
-      { ticker: "1295", name: "Public Bank Berhad", symbol: "MYX:PBBANK", risk: "Low–Medium", fit: ["low", "medium"], description: "A Malaysian financial group to evaluate on lending quality, business growth, valuation and capital strength.", entry: "Check the latest results and valuation; compare loan quality and growth with other banks.", hold: "Review performance and fundamentals over a multi-year horizon rather than assuming returns are steady." },
-      { ticker: "5183", name: "PETRONAS Chemicals Group Berhad", symbol: "MYX:PCHEM", risk: "High", fit: ["high", "medium"], description: "A chemicals producer exposed to global commodity prices, industrial demand and capacity cycles.", entry: "Check current earnings, commodity and feedstock prices, capacity conditions and valuation before considering an entry.", hold: "Cyclical businesses need frequent thesis checks; plan for the possibility of substantial price swings." }
+      { ticker: "1155", name: "Malayan Banking Berhad", symbol: "MYX:MAYBANK", chartSymbol: "1155.KL", risk: "Low–Medium", fit: ["low", "medium"], description: "A major Malaysian bank to research for its capital, asset quality, regional earnings and dividend policy.", entry: "Review current financial results, valuation, credit quality and dividend announcements; check local trading rules.", hold: "Reassess after reporting periods and as interest-rate, credit and regional conditions change." },
+      { ticker: "1295", name: "Public Bank Berhad", symbol: "MYX:PBBANK", chartSymbol: "1295.KL", risk: "Low–Medium", fit: ["low", "medium"], description: "A Malaysian financial group to evaluate on lending quality, business growth, valuation and capital strength.", entry: "Check the latest results and valuation; compare loan quality and growth with other banks.", hold: "Review performance and fundamentals over a multi-year horizon rather than assuming returns are steady." },
+      { ticker: "5183", name: "PETRONAS Chemicals Group Berhad", symbol: "MYX:PCHEM", chartSymbol: "5183.KL", risk: "High", fit: ["high", "medium"], description: "A chemicals producer exposed to global commodity prices, industrial demand and capacity cycles.", entry: "Check current earnings, commodity and feedstock prices, capacity conditions and valuation before considering an entry.", hold: "Cyclical businesses need frequent thesis checks; plan for the possibility of substantial price swings." }
     ]
   }
 };
@@ -55,9 +55,8 @@ const quotes = [
 const researchSources = [
   { name: "Investing.com", url: (ticker) => `https://www.investing.com/search/?q=${encodeURIComponent(ticker)}` },
   { name: "Seeking Alpha", url: (ticker) => `https://seekingalpha.com/search?q=${encodeURIComponent(ticker)}` },
-  { name: "TradingView", url: (ticker) => `https://www.tradingview.com/search/?query=${encodeURIComponent(ticker)}` },
   { name: "Simply Wall St", url: (ticker) => `https://simplywall.st/search?q=${encodeURIComponent(ticker)}` },
-  { name: "Google Finance", url: (ticker, name) => `https://www.google.com/finance/search?q=${encodeURIComponent(`${ticker} ${name}`)}` }
+  { name: "Yahoo Finance", url: (ticker, name) => `https://finance.yahoo.com/search?p=${encodeURIComponent(`${ticker} ${name}`)}` }
 ];
 
 const form = document.querySelector("#planner-form");
@@ -81,7 +80,14 @@ function selectStocks(market, risk, preferred) {
   const allStocks = stocksByMarket[market].stocks;
   const candidates = allStocks.filter((stock) => stock.fit.includes(risk));
   const ideas = (candidates.length ? candidates : allStocks).slice(0, 3);
-  if (!preferred.trim()) return ideas;
+  const ensureMinimum = (stocks) => {
+    const selected = [...new Map(stocks.map((stock) => [stock.ticker, stock])).values()];
+    allStocks.forEach((stock) => {
+      if (selected.length < 2 && !selected.some((item) => item.ticker === stock.ticker)) selected.push(stock);
+    });
+    return selected.slice(0, 5);
+  };
+  if (!preferred.trim()) return ensureMinimum(ideas);
 
   const query = preferred.trim().toLowerCase();
   const matches = allStocks.filter((stock) =>
@@ -98,9 +104,9 @@ function selectStocks(market, risk, preferred) {
       hold: "There is no guaranteed holding period. Set a review horizon that suits your goals and reassess the investment thesis regularly.",
       userEntered: true
     };
-    return [requestedStock, ...ideas.slice(0, 2)];
+    return [requestedStock, ...ensureMinimum(ideas).slice(0, 4)].slice(0, 5);
   }
-  return [...matches, ...ideas.filter((stock) => !matches.includes(stock))].slice(0, 3);
+  return ensureMinimum([...matches, ...ideas, ...allStocks]);
 }
 
 function renderCard(stock, index) {
@@ -109,18 +115,15 @@ function renderCard(stock, index) {
   }).join("");
   const initials = stock.ticker.slice(0, 2);
   const listing = stock.symbol ? `${stock.ticker} · ${stock.symbol}` : `${stock.ticker} · User-entered lookup`;
-  const marketData = stock.symbol
-    ? `<section class="market-data-panel" aria-label="Current quote, chart and indicators for ${escapeHtml(stock.ticker)}">
-        <div class="market-data-heading"><h4>Latest available price</h4><span>May be exchange-delayed</span></div>
-        <div class="quote-widget-slot" id="quote-widget-${index}"></div>
-        <div class="market-data-heading chart-heading"><h4>Interactive TradingView chart</h4><span>Range · Zoom · Draw · RSI · MACD · SMA</span></div>
-        <div class="chart-widget-slot" id="chart-widget-${index}"></div>
-        <p class="indicator-note">Relative Strength Index, Moving Average Convergence Divergence and Simple Moving Average. Indicators describe past data; they are not standalone buy or sell signals.</p>
-        <a class="tradingview-credit" href="https://www.tradingview.com/symbols/${encodeURIComponent(stock.symbol.replace(":", "-"))}/" target="_blank" rel="noopener noreferrer">Open full interactive chart on TradingView <span aria-hidden="true">↗</span></a>
+  const marketData = stock.chartSymbol
+    ? `<section class="market-data-panel" aria-label="Interactive chart for ${escapeHtml(stock.ticker)}">
+        <div class="market-data-heading"><h4>Interactive market chart</h4><span>Yahoo Finance</span></div>
+        <a class="market-chart-link" href="https://finance.yahoo.com/quote/${encodeURIComponent(stock.chartSymbol)}/chart/" target="_blank" rel="noopener noreferrer">Open ${escapeHtml(stock.ticker)} chart <span aria-hidden="true">↗</span></a>
+        <p class="market-chart-note">Opens the chart for ${escapeHtml(stock.chartSymbol)} on Yahoo Finance. Quotes may be delayed and shown in the listing currency.</p>
       </section>`
-    : `<section class="market-data-panel unverified-market-data" aria-label="Market data unavailable for user-entered lookup">
-        <div class="market-data-heading"><h4>Quote, chart & indicators</h4><span>Listing not verified</span></div>
-        <p>We don’t have a verified market symbol for this search. Check the exact company and exchange in the research links before relying on a quote or chart.</p>
+    : `<section class="market-data-panel unverified-market-data" aria-label="Chart unavailable for user-entered lookup">
+        <div class="market-data-heading"><h4>Interactive market chart</h4><span>Listing not verified</span></div>
+        <p>We don’t have a verified chart symbol for this search. Confirm the exact company and exchange using the research links before opening a market chart.</p>
       </section>`;
 
   return `<article class="stock-card">
@@ -139,95 +142,6 @@ function renderCard(stock, index) {
   </article>`;
 }
 
-function mountTradingViewWidget(slot, widgetName, config, height, loadingText, unavailableText) {
-  const loading = document.createElement("p");
-  loading.className = "widget-loading";
-  loading.setAttribute("role", "status");
-  loading.textContent = loadingText;
-
-  const container = document.createElement("div");
-  container.className = "tradingview-widget-container";
-  container.style.height = `${height}px`;
-  container.style.width = "100%";
-
-  const widget = document.createElement("div");
-  widget.className = "tradingview-widget-container__widget";
-  widget.style.height = "100%";
-  widget.style.width = "100%";
-  container.append(widget);
-
-  const script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = `https://s3.tradingview.com/external-embedding/embed-widget-${widgetName}.js`;
-  script.async = true;
-  script.textContent = JSON.stringify(config);
-
-  let settled = false;
-  const showUnavailable = () => {
-    if (settled) return;
-    settled = true;
-    loading.textContent = unavailableText;
-  };
-  script.addEventListener("load", () => {
-    window.setTimeout(() => {
-      if (container.querySelector("iframe")) {
-        settled = true;
-        loading.remove();
-      } else {
-        showUnavailable();
-      }
-    }, 3000);
-  });
-  script.addEventListener("error", showUnavailable);
-  container.append(script);
-  slot.replaceChildren(loading, container);
-}
-
-function mountMarketWidgets(stocks) {
-  stocks.forEach((stock, index) => {
-    if (!stock.symbol) return;
-
-    mountTradingViewWidget(
-      document.querySelector(`#quote-widget-${index}`),
-      "symbol-info",
-      {
-        symbol: stock.symbol,
-        colorTheme: "light",
-        isTransparent: false,
-        locale: "en",
-        width: "100%"
-      },
-      116,
-      "Loading the latest available quote…",
-      "Quote unavailable right now. Try the TradingView research link below."
-    );
-    mountTradingViewWidget(
-      document.querySelector(`#chart-widget-${index}`),
-      "advanced-chart",
-      {
-        autosize: true,
-        symbol: stock.symbol,
-        interval: "D",
-        timezone: "exchange",
-        theme: "light",
-        backgroundColor: "rgba(255, 255, 255, 1)",
-        style: "1",
-        withdateranges: true,
-        hide_side_toolbar: false,
-        allow_symbol_change: false,
-        save_image: false,
-        studies: ["RSI@tv-basicstudies", "MACD@tv-basicstudies", "MASimple@tv-basicstudies"],
-        locale: "en",
-        calendar: false,
-        support_host: "https://www.tradingview.com"
-      },
-      480,
-      "Loading the daily chart and indicators…",
-      "Chart unavailable right now. Try the TradingView research link below."
-    );
-  });
-}
-
 function displayQuote() {
   let index = Math.floor(Math.random() * quotes.length);
   if (quotes.length > 1 && index === previousQuoteIndex) index = (index + 1) % quotes.length;
@@ -244,9 +158,8 @@ function renderStockAdvice(formData, scrollToResults = true) {
   const marketName = stocksByMarket[market].market;
   const budgetLabel = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(budget);
   document.querySelector("#results-intro").textContent =
-    `For ${marketName}, a ${formData.get("risk")}-risk starting point and a planned budget of ${budgetLabel}. ${hasRiskMatches ? "These examples are not live-screened recommendations." : "No starter-list examples are tagged for this risk flavour; broader market ideas are shown for research, not as risk-matched recommendations."}`;
+    `For ${marketName}, a ${formData.get("risk")}-risk starting point and a planned budget of ${budgetLabel}. ${hasRiskMatches ? "These examples are not live-screened recommendations." : "No starter-list examples are tagged for this risk flavour; broader market ideas are shown for research, not as risk-matched recommendations."} Each plan includes 2–5 ideas.`;
   document.querySelector("#results-grid").innerHTML = stockIdeas.map(renderCard).join("");
-  mountMarketWidgets(stockIdeas);
   const criteriaNote = document.querySelector("#criteria-note");
   const criteria = formData.get("criteria").trim();
   const preferred = formData.get("preferred").trim();

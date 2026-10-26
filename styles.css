@@ -134,15 +134,9 @@ h1, h2, .side-note-title { font-family: var(--font-display); }
 .market-data-heading h4 { margin: 0; color: #465244; font: 700 9px var(--font-display); }
 .market-data-heading > span { color: #92998f; font-size: 8px; text-align: right; }
 .chart-heading { margin-top: 10px; }
-.quote-widget-slot, .chart-widget-slot { position: relative; width: 100%; overflow: hidden; border-radius: 5px; background: white; }
-.quote-widget-slot { height: 116px; min-height: 116px; }
-.chart-widget-slot { height: 480px; min-height: 480px; }
-.tradingview-widget-container, .tradingview-widget-container__widget { width: 100%; }
-.tradingview-widget-container__widget iframe { display: block; width: 100% !important; border: 0; }
-.widget-loading { position: absolute; z-index: 1; inset: 0; display: grid; place-items: center; margin: 0; padding: 12px; background: rgba(255, 255, 255, .94); color: #7c8678; font-size: 9px; line-height: 1.6; text-align: center; }
-.indicator-note { margin: 6px 0 0; color: #858d82; font-size: 8px; line-height: 1.6; }
-.tradingview-credit { display: inline-flex; gap: 4px; margin-top: 6px; color: #778475; font-size: 8px; text-decoration: none; }
-.tradingview-credit:hover { color: var(--green-dark); }
+.market-chart-link { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 11px; border-radius: 6px; background: #edf3eb; color: var(--green-dark); font-size: 10px; font-weight: 700; text-decoration: none; }
+.market-chart-link:hover { background: #e3ecdf; }
+.market-chart-note { margin: 8px 0 0; color: #858d82; font-size: 8px; line-height: 1.6; }
 .unverified-market-data p { margin: 12px 0 3px; color: #778075; font-size: 9px; line-height: 1.65; }
 .plan-row { display: grid; grid-template-columns: 63px 1fr; gap: 8px; padding: 9px 0; border-top: 1px solid #eff1ed; }
 .plan-label { color: #969c94; font-size: 8px; font-weight: 700; letter-spacing: .3px; text-transform: uppercase; }
