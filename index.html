@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+    <meta name="description" content="Explore stock research ideas and use practical financial calculators with Jeremy.">
+    <title>Jeremy: Your Free Financial Advisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script data-goatcounter="https://jeremytantat.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Jeremy home">
+        <span class="brand-mark" aria-hidden="true">j.</span>
+        <span>jeremy<span class="brand-period">.</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="market-status"><span class="status-dot"></span> Your research companion</span>
+        <nav class="page-tabs" role="tablist" aria-label="Financial tools">
+          <button class="page-tab" id="advice-tab" type="button" role="tab" aria-selected="true" aria-controls="stock-advice-page">Stock Advice</button>
+          <button class="page-tab" id="calculators-tab" type="button" role="tab" aria-selected="false" aria-controls="calculators-page" tabindex="-1">Financial Calculators</button>
+        </nav>
+        <a class="top-link" href="#how-it-works">How it works <span aria-hidden="true">↗</span></a>
+        <button class="reset-button" id="reset-all" type="button">Reset all</button>
+        <span class="storage-status" id="storage-status" role="status" aria-live="polite" hidden></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-panel" id="stock-advice-page" role="tabpanel" aria-labelledby="advice-tab">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A little more clarity for your next move</div>
+          <h1>Your free<br>financial <span>advisor.</span></h1>
+          <p class="hero-description">Explore stock research ideas and practical tools to help you make more informed financial decisions.</p>
+          <div class="hero-note">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <span>Good investing starts with a plan, not a prediction.</span>
+          </div>
+          <div class="hero-stats" aria-label="About Jeremy">
+            <div><strong>5</strong><span>markets to explore</span></div>
+            <span class="stat-divider" aria-hidden="true"></span>
+            <div><strong>4</strong><span>research sources</span></div>
+            <span class="stat-divider" aria-hidden="true"></span>
+            <div><strong>1</strong><span>calmer next step</span></div>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-sun"></div>
+          <div class="art-grid"></div>
+          <div class="chart-card">
+            <div class="chart-card-head">
+              <span class="chart-label">YOUR NEXT MOVE</span>
+              <span class="chart-trend">↗</span>
+            </div>
+            <svg class="chart-line" viewBox="0 0 320 100" fill="none" role="img" aria-label="Illustrative upward chart">
+              <path d="M1 78C25 78 28 62 48 66C70 70 74 46 99 53C121 59 132 35 154 43C176 51 181 22 205 30C224 37 235 17 255 22C276 28 289 8 319 9" stroke="#486c4f" stroke-width="3" stroke-linecap="round"/>
+              <path d="M1 78C25 78 28 62 48 66C70 70 74 46 99 53C121 59 132 35 154 43C176 51 181 22 205 30C224 37 235 17 255 22C276 28 289 8 319 9V100H1V78Z" fill="url(#chartFill)"/>
+              <defs><linearGradient id="chartFill" x1="160" y1="9" x2="160" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#96b391" stop-opacity=".3"/><stop offset="1" stop-color="#96b391" stop-opacity="0"/></linearGradient></defs>
+            </svg>
+            <div class="chart-months"><span>PLAN</span><span>RESEARCH</span><span>DECIDE</span></div>
+          </div>
+          <div class="floating-note"><span class="floating-icon">✦</span><span>Think long term.<br><strong>Stay curious.</strong></span></div>
+          <span class="art-caption">A good plan beats a perfect guess.</span>
+        </div>
+      </section>
+
+      <section class="planner-section" id="planner">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR INVESTING SNAPSHOT</div>
+            <h2>Let’s make a <span>thoughtful plan.</span></h2>
+          </div>
+          <p>Tell Jeremy what matters to you.<br>No jargon, no pressure.</p>
+        </div>
+
+        <div class="planner-layout">
+          <form class="planner-form" id="planner-form">
+            <div class="form-topline"><span class="step-number">01</span><span>Your starting point</span><span class="required-label">* Required</span></div>
+            <div class="form-grid">
+              <label class="field">
+                <span class="field-label">Risk flavour <span class="asterisk">*</span></span>
+                <span class="field-hint">How do you feel about the ups and downs?</span>
+                <select id="risk" name="risk" required>
+                  <option value="" selected disabled>Choose your comfort level</option>
+                  <option value="low">Low risk · I prefer steadier moves</option>
+                  <option value="medium">Medium risk · A balanced approach</option>
+                  <option value="high">High risk · I can handle bigger swings</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field-label">Budget <span class="asterisk">*</span></span>
+                <span class="field-hint">Your planned investment amount, in US dollars</span>
+                <span class="input-with-prefix"><span aria-hidden="true">$</span><input id="budget" name="budget" type="number" min="1000" step="100" placeholder="e.g. 5,000" required inputmode="decimal" aria-describedby="budget-help"></span>
+                <span class="input-help" id="budget-help">Minimum budget: USD 1,000</span>
+              </label>
+              <label class="field">
+                <span class="field-label">Market <span class="asterisk">*</span></span>
+                <span class="field-hint">Where would you like to look?</span>
+                <select id="market" name="market" required>
+                  <option value="" selected disabled>Select a market</option>
+                  <option value="us">United States</option>
+                  <option value="china">China</option>
+                  <option value="hongkong">Hong Kong</option>
+                  <option value="singapore">Singapore</option>
+                  <option value="malaysia">Malaysia</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-divider"></div>
+            <div class="form-topline optional-topline"><span class="step-number">02</span><span>Make it yours</span><span class="optional-label">Optional</span></div>
+            <div class="form-grid optional-grid">
+              <label class="field">
+                <span class="field-label">A stock on your mind?</span>
+                <span class="field-hint">Name or ticker — we’ll bring it into your research shortlist.</span>
+                <input id="preferred" name="preferred" type="text" placeholder="e.g. Apple or AAPL" autocomplete="off">
+              </label>
+              <label class="field">
+                <span class="field-label">Other things you’re looking for?</span>
+                <span class="field-hint">Add a metric or preference to check while researching.</span>
+                <input id="criteria" name="criteria" type="text" placeholder="e.g. P/E below 15, dividend income">
+              </label>
+            </div>
+            <div class="form-bottom">
+              <p><span class="lock-icon" aria-hidden="true">◈</span> Your last search is saved on this device.</p>
+              <button class="submit-button" type="submit"><span>Build my research plan</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            </div>
+          </form>
+          <aside class="side-note">
+            <span class="side-note-icon" aria-hidden="true">✦</span>
+            <p class="side-note-kicker">A good reminder</p>
+            <p class="side-note-title">There’s no rush<br>to get it right.</p>
+            <p class="side-note-copy">A shortlist is just a starting point. Take your time to learn about each company before making a decision.</p>
+            <span class="side-note-decoration" aria-hidden="true">J.</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="results-section" id="results" aria-live="polite" aria-atomic="false" hidden>
+        <div class="results-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> YOUR RESEARCH PLAN</div>
+            <h2>A few ideas to <span>look into.</span></h2>
+            <p class="results-intro" id="results-intro"></p>
+          </div>
+          <span class="ideas-badge"><span class="status-dot"></span> Research ideas, not live picks</span>
+        </div>
+        <div class="quote-card" id="quote-card">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <div><p class="quote-text" id="quote-text"></p><span class="quote-attribution" id="quote-attribution"></span></div>
+          <span class="quote-sparkle" aria-hidden="true">✳</span>
+        </div>
+        <div class="results-grid" id="results-grid"></div>
+        <div class="criteria-note" id="criteria-note" hidden></div>
+        <div class="results-disclaimer"><span aria-hidden="true">ⓘ</span><p><strong>A friendly but important note.</strong> This is educational information and general research inspiration, not financial advice or a recommendation to buy or sell. Example stocks are not screened against your suitability, company filings, or current news. TradingView quotes and charts show the latest data available to its widgets and may be delayed or unavailable depending on the exchange. Technical indicators use historical data and do not predict future prices. Markets are unpredictable and you could lose money. Verify prices, fees, currency conversion, company information, and investment suitability before making a decision.</p></div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="how-intro">
+          <div class="eyebrow"><span class="eyebrow-line"></span> THE JEREMY WAY</div>
+          <h2>Research first.<br><span>Decide with care.</span></h2>
+          <p>Markets are unpredictable. A simple process can help you make decisions that feel more considered.</p>
+        </div>
+        <div class="how-steps">
+          <article class="how-step"><span class="how-step-number">01</span><div><h3>Start with what suits you</h3><p>Your budget and risk comfort shape the kind of companies worth exploring.</p></div><span class="step-icon" aria-hidden="true">◎</span></article>
+          <article class="how-step"><span class="how-step-number">02</span><div><h3>Check more than one source</h3><p>Compare company fundamentals, valuation, news and chart context for yourself.</p></div><span class="step-icon" aria-hidden="true">⌕</span></article>
+          <article class="how-step"><span class="how-step-number">03</span><div><h3>Make your own call</h3><p>There’s no guaranteed entry point or holding period. Keep your plan personal.</p></div><span class="step-icon" aria-hidden="true">↗</span></article>
+        </div>
+      </section>
+      </div>
+
+      <section class="calculators-page page-panel" id="calculators-page" role="tabpanel" aria-labelledby="calculators-tab" hidden>
+        <div class="calculator-intro">
+          <div class="eyebrow"><span class="eyebrow-line"></span> YOUR FINANCIAL TOOLKIT</div>
+          <h1>Make the numbers <span>work for you.</span></h1>
+          <p>Explore how returns, compounding and loan payments can affect your plans. Estimates are for educational purposes.</p>
+        </div>
+        <div class="calculator-grid">
+          <article class="calculator-card">
+            <div class="calculator-card-heading"><span class="step-number">01</span><div><h2>Return On Investment (ROI)</h2><p>Estimate the gain or loss compared with your original investment.</p></div></div>
+            <form class="calculator-form" id="roi-form">
+              <label class="calculator-field">Initial investment <span class="calculator-input"><span>$</span><input name="initial" type="number" min="0.01" step="any" placeholder="10,000" required></span></label>
+              <label class="calculator-field">Final value <span class="calculator-input"><span>$</span><input name="final" type="number" min="0" step="any" placeholder="12,500" required></span></label>
+              <fieldset class="roi-period-fieldset">
+                <legend>Investment term</legend>
+                <div class="roi-period-options">
+                  <label><input type="radio" name="period-mode" value="duration" checked> Enter years &amp; months</label>
+                  <label><input type="radio" name="period-mode" value="dates"> Select start &amp; end dates</label>
+                </div>
+                <div class="roi-term-grid" id="roi-duration-fields">
+                  <label class="calculator-field">Years <span class="calculator-input"><input name="years" type="number" min="0" max="1000" step="1" placeholder="e.g. 2" required></span></label>
+                  <label class="calculator-field">Months <span class="calculator-input"><input name="months" type="number" min="0" max="11" step="1" placeholder="e.g. 6" required></span></label>
+                </div>
+                <div class="roi-term-grid" id="roi-date-fields" hidden>
+                  <label class="calculator-field">Start date <span class="calculator-input"><input name="start-date" type="date" disabled></span></label>
+                  <label class="calculator-field">End date <span class="calculator-input"><input name="end-date" type="date" disabled></span></label>
+                </div>
+              </fieldset>
+              <button class="submit-button" type="submit">Calculate ROI <span class="button-arrow" aria-hidden="true">↗</span></button>
+            </form>
+            <div class="calculator-result" id="roi-result" aria-live="polite" hidden></div>
+            <a class="calculator-reference" href="https://www.fncalculator.com/financialcalculator?type=roiCalculator" target="_blank" rel="noopener noreferrer">View reference calculator <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="calculator-card">
+            <div class="calculator-card-heading"><span class="step-number">02</span><div><h2>Compound Interest</h2><p>See how an initial deposit may grow with interest over time.</p></div></div>
+            <form class="calculator-form" id="interest-form">
+              <label class="calculator-field">Initial principal <span class="calculator-input"><span>$</span><input name="principal" type="number" min="0.01" step="any" placeholder="10,000" required></span></label>
+              <label class="calculator-field">Annual interest rate <span class="calculator-input"><input name="rate" type="number" min="0" max="1000" step="any" placeholder="5"><span>%</span></span></label>
+              <label class="calculator-field">Compounding frequency
+                <select name="frequency" required>
+                  <option value="" selected disabled>Select frequency</option><option value="1">Annually</option><option value="2">Semi-annually</option><option value="4">Quarterly</option><option value="12">Monthly</option><option value="365">Daily</option>
+                </select>
+              </label>
+              <label class="calculator-field">Time period (years) <span class="calculator-input"><input name="years" type="number" min="0.01" max="1000" step="any" placeholder="10" required></span></label>
+              <button class="submit-button" type="submit">Calculate growth <span class="button-arrow" aria-hidden="true">↗</span></button>
+            </form>
+            <div class="calculator-result" id="interest-result" aria-live="polite" hidden></div>
+            <a class="calculator-reference" href="https://www.fncalculator.com/financialcalculator?type=interestCalculator" target="_blank" rel="noopener noreferrer">View reference calculator <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="calculator-card">
+            <div class="calculator-card-heading"><span class="step-number">03</span><div><h2>Loan Calculator</h2><p>Estimate a fixed-rate loan’s monthly payment and total interest.</p></div></div>
+            <form class="calculator-form" id="loan-form">
+              <label class="calculator-field">Loan amount <span class="calculator-input"><span>$</span><input name="principal" type="number" min="0.01" step="any" placeholder="25,000" required></span></label>
+              <label class="calculator-field">Annual interest rate <span class="calculator-input"><input name="rate" type="number" min="0" max="1000" step="any" placeholder="6"><span>%</span></span></label>
+              <label class="calculator-field">Loan term (years) <span class="calculator-input"><input name="years" type="number" min="1" max="100" step="1" placeholder="5" required></span></label>
+              <button class="submit-button" type="submit">Calculate payment <span class="button-arrow" aria-hidden="true">↗</span></button>
+            </form>
+            <div class="calculator-result" id="loan-result" aria-live="polite" hidden></div>
+            <a class="calculator-reference" href="https://www.fncalculator.com/financialcalculator?type=loanCalculator" target="_blank" rel="noopener noreferrer">View reference calculator <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="calculator-disclaimer">Calculations are estimates, not financial advice or loan offers. They exclude taxes, fees, changing rates and other terms that may affect actual results. Confirm details with a qualified professional or lender.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">j.</span><span>jeremy<span class="brand-period">.</span></span></a>
+      <p>Curiosity is a good place to start.</p>
+      <span class="footer-copy">Made for thoughtful investors <span aria-hidden="true">✳</span></span>
+      <div class="footer-visitors" aria-label="Site visitor count">
+        <span>All-time site visits</span>
+        <strong id="visitor-count" role="status" aria-live="polite">Loading…</strong>
+        <a href="https://jeremytantat.goatcounter.com/" target="_blank" rel="noopener noreferrer">GoatCounter <span aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
